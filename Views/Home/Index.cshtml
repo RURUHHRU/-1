@@ -1,0 +1,66 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>登录</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <style>
+        #greeting {
+            position: absolute;
+            top: 45px;
+            left: 520px;
+            color: #7b7878;
+        }
+
+        #half-div {
+            /*设置半边颜色*/
+            width: 55%;
+            right: 0; /*设置右边颜色*/
+            position: absolute;
+            height: 100%;
+            background-color: #4b516e;
+        }
+
+        #no-left {
+            float: left;
+            margin-right: 20px;
+            box-shadow: 5px 5px 10px -4px rgb(77, 173, 173), 5px -5px 10px -4px rgb(194, 190, 190);
+            width: 310px;
+            height: 230px;
+            font-size: 5px;
+            color: #ffffff;
+        }
+
+    </style>
+</head>
+<body>
+    <script src="~/js/site.js"></script>
+   
+    <h1 id="greeting">欢迎使用</h1>
+    <div style=" position:fixed;top: 120px;right: 900px;">
+        <video muted autoplay="autoplay" loop="loop">
+            <source src="./新文件夹/Designer.mp4" type="video/mp4" />
+        </video>
+    </div>
+
+    <div id="half-div">
+        <div id="no-left" style="position: fixed; top: 35%; right: 20%;">
+            <span style="position: absolute;top: 20%; right:87%">账号</span>
+            <span style="position: absolute;top: 35%; right:87%">密码</span>
+
+            <span style="position: absolute;top: 57%; right:87%">验证码</span>
+            <input id="t"  placeholder="字母或数字长度最大20" onclick="draw()" ;v-model="text1" style="position: absolute;top: 19%; right:27%">
+            <input id="tt" placeholder="密码" style="position: absolute;top: 35%; right:27%">
+            @Html.ActionLink("去注册", "Index1", "Home",null, new {  style = "color: #fff;position: absolute;top: 80%; right:15%" })
+            <input id="e1" style="position: absolute;top: 53%; right:53.6%;width: 80px;height: 20px; ">
+            <button onclick="tr()" id="url" style="position:absolute;top: 75%; right:38%; width: 80px; height: 30px;">确定</button>
+            <canvas style="background-color: #ffffff;position: absolute;top: 54%; right:15%" id="canvas" width="100" height="25" onclick="draw()"></canvas>
+        </div>
+    </div>
+</body>
+</html>

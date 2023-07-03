@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>反馈</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #m {
+            height: 300px;
+            width: 600px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        #m9 {
+            height: 300px;
+            width: 600px;
+            display: block;
+            margin: 0 auto;
+            resize: none; /* 禁止调整输入框大小 */
+            overflow: auto; /* 显示滚动条以支持多行输入 */
+            text-align: left; /* 将文本左对齐 */
+        }
+    </style>
+    <script>
+        function qx(){
+            document.getElementById("m9").value=" ";
+        };
+        function qd(){
+            var account = document.getElementById("m9").value;
+            
+            // 将账号和密码打包成JSON格式
+            var data = JSON.stringify({
+                "Account1": account,
+            });
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', "/Home/Index14", true);
+            xhr.setRequestHeader('Content-Type', 'application/json;charset=utf-8');
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status >= 200 && xhr.status < 300) {
+                    // 请求成功处理逻辑
+                    alert("提交成功");
+                    
+                } else if (xhr.status >= 400 && xhr.status < 500) {
+                    alert(xhr.response.message + "提交失败");
+                } else if (xhr.status >= 500) {
+                    alert('服务器内部错误：' + xhr.response.message);
+                }
+
+            };
+            xhr.send(data);
+        }
+    </script>
+</head>
+<body>
+    <div id="m">
+        <h4>请提出您的意见</h4>
+        <textarea id="m9" placeholder="请提出您的意见"></textarea>
+        <button style="width:50px;height:30px;" onclick="qd()">确定</button>
+        <button style="width:50px;height:30px;" onclick="qx()">取消</button>
+    </div>
+</body>
+</html>

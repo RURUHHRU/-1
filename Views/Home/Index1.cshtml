@@ -1,0 +1,113 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>注册</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!-- 引入样式 -->
+
+    <style>
+        .no-left {
+            float: left;
+            margin-right: 20px;
+            box-shadow: 5px 5px 10px -4px rgb(77, 173, 173), 5px -5px 10px -4px rgb(194, 190, 190);
+            width: 310px;
+            height: 230px;
+            font-size: 5px;
+            color: #ffffff;
+        }</style>
+</head>
+<body style="background-color:#4b516e
+">
+    <script src="~/js/site.js"></script>
+
+    <script>
+
+
+        function validateInput11() {
+            var input11 = document.getElementById("11").value;
+            if (input11.length > 20) { // 判断输入长度是否大于20
+                alert("输入长度不能超过20个字符");
+                document.getElementById("11").value = " "; //清空输入框
+                return false;
+            }
+
+            var re = /^[a-z0-9]+$/i; // 正则表达式匹配字母和数字
+            if (!re.test(document.getElementById("11").value)) { // 判断输入是否为字母或数字
+                alert("请输入字母或数字");
+                document.getElementById("11").value = " ";  //清空输入框
+                return false;
+            }
+
+            return true;
+        }
+
+
+    </script>
+    <script>
+
+        function validateInput12() {
+            var input1 = document.getElementById('22').value;
+            if (input1.length > 20) { // 判断输入长度是否大于20
+                alert("输入长度不能超过20个字符");
+                document.getElementById('22').value = " ";
+                return false;
+            }
+
+            var re = /^[a-z0-9]+$/i; // 正则表达式匹配字母和数字
+            if (!re.test(document.getElementById('22').value)) { // 判断输入是否为字母或数字
+                alert("请输入字母或数字");
+                document.getElementById('22').value = " ";
+                return false;
+            }
+
+            return true;
+        }
+
+
+    </script>
+    <script>
+
+
+
+        function validateInpu13() {
+            if (document.getElementById("22").value === document.getElementById("myInp").value) {
+
+                return
+            } else {
+                alert("两次密码不一样");
+                document.getElementById("myInp").value = " ";
+                return
+            }
+        }
+    </script>
+    <script>
+        function checkPasswordMatch() {
+            if (code != document.getElementById("myInp1").value) {
+            alert("验证码不正确")
+                return
+            }
+        }
+    </script>
+
+    <div class="no-left" style="position: fixed; top: 35%; right: 40%;">
+        <span style="position: absolute;top: 20%; right:87%">账号</span>
+        <span style="position: absolute;top: 30%; right:87%">密码</span>
+        <span style="position: absolute;top: 40%; right:87%">确定密码</span>
+        <span style="position: absolute;top: 57%; right:87%">验证码</span>
+        <input type="text" ; id="11" onblur="validateInput11()" placeholder="字母或数字长度最大20" style="position: absolute;top: 19%; right:27%" onclick="draw()">
+        <input type="text" id="22" onblur="validateInput12()" style="position: absolute;top: 30%; right:27%">
+        <input type="text" id="myInp" onblur="validateInpu13()" style="position: absolute;top: 42%; right:27%">
+        <input type="text" id="myInp1" onblur="checkPasswordMatch()" style="position: absolute;top: 53%; right:53.6%;width: 80px;height: 20px; ">
+        <button id="butto" onclick="tt()" type="button" value="确定" style="position:absolute;top: 75%; right:38%; width: 80px; height: 30px;">确定</button>
+        <canvas  style="background-color: #ffffff;position: absolute;top: 54%; right:15%" id="canvas" width="100" height="25" onclick="draw()"></canvas>
+        @Html.ActionLink("去登录", "Index", "Home",null, new {  style = "color: #fff;position:absolute;top: 80%; right:15%" })
+    </div>
+</body>
+
+</html>
