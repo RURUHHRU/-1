@@ -1,0 +1,137 @@
+﻿
+
+@import url('stylesheet.css');
+#half-div {
+    /*设置半边颜色*/
+    width: 15%;
+    left: 0; /*设置右边颜色*/
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    height: 100%;
+    background-color: #647ca3;
+}
+
+#r {
+    position: absolute;
+    width: 305px;
+    height: 182px;
+    left: 269px;
+    top: 112px;
+    box-sizing: border-box;
+    background: rgb(196, 196, 196);
+    opacity: 0.27;
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 0px 4px 4px rgba(80, 59, 59, 0.25);
+    border-radius: 10px;
+}
+
+
+#yishen {
+    position: absolute;
+    width: 305px;
+    height: 182px;
+    left: 639px;
+    top: 112px;
+    box-sizing: border-box;
+    background: rgb(196, 196, 196);
+    opacity: 0.27;
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 0px 4px 4px rgba(80, 59, 59, 0.25);
+    border-radius: 10px;
+}
+
+
+#zhenduan {
+    position: absolute;
+    width: 305px;
+    height: 182px;
+    left: 269px;
+    top: 350px;
+    box-sizing: border-box;
+    background: rgb(196, 196, 196);
+    opacity: 0.27;
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 0px 4px 4px rgba(80, 59, 59, 0.25);
+    border-radius: 10px;
+}
+
+#yujing {
+    position: absolute;
+    width: 305px;
+    height: 182px;
+    left: 639px;
+    top: 350px;
+    box-sizing: border-box;
+    background: rgb(196, 196, 196);
+    opacity: 0.27;
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 0px 4px 4px rgba(80, 59, 59, 0.25);
+    border-radius: 10px;
+}
+
+    #yujing:hover {
+        background-color: white;
+        transform: translateY(-5px);
+    }
+
+#zhenduan:hover {
+    background-color: white;
+    transform: translateY(-5px);
+}
+
+
+#yishen:hover {
+    background-color: white;
+    transform: translateY(-5px);
+}
+
+#r:hover {
+    background-color: white;
+    transform: translateY(-5px);
+}
+
+
+#chuangwei {
+    position: absolute;
+    width: 305px;
+    height: 182px;
+    left: 999px;
+    top: 112px;
+    box-sizing: border-box;
+    background: rgb(196, 196, 196);
+    opacity: 0.27;
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 0px 4px 4px rgba(80, 59, 59, 0.25);
+    border-radius: 10px;
+}
+
+    #chuangwei:hover {
+        background-color: white;
+        transform: translateY(-5px);
+    }
+
+
+#yaoping {
+    position: absolute;
+    width: 305px;
+    height: 182px;
+    left: 999px;
+    top: 350px;
+    box-sizing: border-box;
+    background: rgb(196, 196, 196);
+    opacity: 0.27;
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 0px 4px 4px rgba(80, 59, 59, 0.25);
+    border-radius: 10px;
+}
+
+    #yaoping:hover {
+        background-color: white;
+        transform: translateY(-5px);
+    }
+
+#h2:hover {
+    background-color: white;
+    transform: translateY(-5px);
+}
